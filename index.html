@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLUMČEVIĆ | REHAU PVC i FEAL aluminijska stolarija</title>
+  <meta name="description" content="REHAU PVC i FEAL aluminijska stolarija, profesionalna izrada i ugradnja. Doboj i okolina.">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#F4F6FA',
+              100: '#E9EDF5',
+              200: '#D2D9E8',
+              300: '#B5C2D9',
+              400: '#8FA3C3',
+              500: '#5B8DBE',
+              600: '#507498',
+              700: '#3C5180',
+              800: '#34487B',
+              900: '#26365F'
+            },
+            aluminium: '#E5E7E9',
+            footer: '#26365f'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      font-size: 17px;
+      font-weight: 700;
+      color: #34487B;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #3C5180 !important;
+    }
+
+    .door-swiper .swiper-slide {
+      opacity: .25;
+      transform: scale(.92);
+      transition: all .4s ease;
+    }
+
+    .door-swiper .swiper-slide-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (max-width: 767px) {
+      .swiper-button-next, .swiper-button-prev {
+        width: 38px;
+        height: 38px;
+      }
+      .swiper-button-next::after, .swiper-button-prev::after {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800 antialiased">
+
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-700 text-lg font-bold text-white">G</div>
+      <div>
+        <div class="text-lg font-bold tracking-wide text-slate-900">GLUMČEVIĆ</div>
+        <div class="text-xs text-slate-500">PVC i aluminijska stolarija</div>
+      </div>
+    </a>
+
+    <div class="hidden items-center gap-7 text-sm font-medium lg:flex">
+      <a href="#prozori" class="transition hover:text-brand-700">Prozori</a>
+      <a href="#vrata" class="transition hover:text-brand-700">Vrata</a>
+      <a href="#opcije" class="transition hover:text-brand-700">Dodatne mogućnosti</a>
+      <a href="#povjerenje" class="transition hover:text-brand-700">Povjerenje</a>
+      <a href="#feal" class="transition hover:text-brand-700">FEAL</a>
+      <a href="#kontakt" class="transition hover:text-brand-700">Kontakt</a>
+    </div>
+
+    <a href="#kontakt" class="hidden rounded-full bg-brand-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-800 lg:inline-flex">Zatraži ponudu</a>
+    <button id="mobileMenuButton" class="rounded-lg p-2 text-slate-700 lg:hidden" aria-label="Otvori meni">☰</button>
+  </nav>
+
+  <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden">
+    <div class="flex flex-col px-5 py-4">
+      <a href="#prozori" class="border-b border-slate-100 py-3">Prozori</a>
+      <a href="#vrata" class="border-b border-slate-100 py-3">Vrata</a>
+      <a href="#opcije" class="border-b border-slate-100 py-3">Dodatne mogućnosti</a>
+      <a href="#povjerenje" class="border-b border-slate-100 py-3">Povjerenje</a>
+      <a href="#feal" class="border-b border-slate-100 py-3">FEAL</a>
+      <a href="#kontakt" class="py-3">Kontakt</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative min-h-[calc(100vh-73px)] overflow-hidden bg-slate-900">
+  <div class="swiper hero-swiper h-[calc(100vh-73px)] min-h-[620px]">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide relative">
+        <img src="https://placehold.co/1920x1100" alt="REHAU PVC stolarija" class="absolute inset-0 h-full w-full object-cover">
+        <div class="absolute inset-0 bg-slate-900/55"></div>
+        <div class="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 lg:px-8">
+          <div class="max-w-3xl text-white">
+            <div class="mb-5 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-2 text-sm backdrop-blur">Certifikovani REHAU partner</div>
+            <h1 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-7xl">REHAU stolarija za <span class="text-brand-300">topao i tih dom.</span></h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">Kvalitetna PVC stolarija, profesionalna izrada i stručna ugradnja uz više od 25 godina iskustva.</p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="#kontakt" class="rounded-full bg-white px-7 py-3.5 text-center font-semibold text-brand-800 transition hover:bg-brand-50">Zatraži ponudu</a>
+              <a href="#kontakt" class="rounded-full border border-white/60 px-7 py-3.5 text-center font-semibold text-white transition hover:bg-white/10">Dogovori mjerenje</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide relative">
+        <img src="https://placehold.co/1920x1100" alt="PVC prozori" class="absolute inset-0 h-full w-full object-cover">
+        <div class="absolute inset-0 bg-slate-900/55"></div>
+        <div class="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 lg:px-8">
+          <div class="max-w-3xl text-white">
+            <div class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-brand-300">Kvalitet koji traje</div>
+            <h2 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Više topline.<br>Manje buke.</h2>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">REHAU PVC sistemi prilagođeni savremenim zahtjevima stanovanja.</p>
+            <a href="#prozori" class="mt-8 inline-flex rounded-full bg-brand-600 px-7 py-3.5 font-semibold text-white transition hover:bg-brand-500">Pogledaj prozore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide relative">
+        <img src="https://placehold.co/1920x1100" alt="PVC ulazna vrata" class="absolute inset-0 h-full w-full object-cover">
+        <div class="absolute inset-0 bg-slate-900/60"></div>
+        <div class="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 lg:px-8">
+          <div class="max-w-3xl text-white">
+            <div class="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-brand-300">Sigurnost i izgled</div>
+            <h2 class="text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Ulazna vrata<br>po vašoj mjeri.</h2>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">Stabilna, sigurna i prilagođena vašem domu.</p>
+            <a href="#vrata" class="mt-8 inline-flex rounded-full bg-brand-600 px-7 py-3.5 font-semibold text-white transition hover:bg-brand-500">Pogledaj vrata</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+</section>
+
+<!-- PVC PROZORI -->
+<section id="prozori" class="bg-white py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="max-w-4xl">
+      <div class="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-brand-700">PVC prozori · REHAU</div>
+      <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Prozori koji čuvaju toplinu vašeg doma.</h2>
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">Savremeni REHAU PVC sistemi pružaju kvalitetnu toplotnu i zvučnu izolaciju, dug vijek trajanja i mogućnost prilagođavanja potrebama vašeg prostora.</p>
+    </div>
+
+    <div class="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><div class="mb-4 text-2xl">⌂</div><h3 class="font-bold text-slate-900">Toplotna izolacija</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">Bolja zaštita doma od gubitka toplote.</p></article>
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><div class="mb-4 text-2xl">◌</div><h3 class="font-bold text-slate-900">Zvučna izolacija</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">Više mira i ugodniji prostor.</p></article>
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><div class="mb-4 text-2xl">✓</div><h3 class="font-bold text-slate-900">Dug vijek trajanja</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">Kvalitetni profili i pouzdana izrada.</p></article>
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-6"><div class="mb-4 text-2xl">↗</div><h3 class="font-bold text-slate-900">Savjetovanje</h3><p class="mt-2 text-sm leading-relaxed text-slate-600">Pomažemo vam izabrati odgovarajuće rješenje.</p></article>
+    </div>
+
+    <div class="mt-20">
+      <div class="grid items-stretch gap-8 lg:grid-cols-2">
+        <div class="relative min-h-[400px] overflow-hidden rounded-3xl">
+          <div class="swiper window-swiper h-full min-h-[400px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="https://placehold.co/1200x900" alt="Zamjena postojeće stolarije" class="h-full w-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://placehold.co/1200x900" alt="Nova ugradnja PVC prozora" class="h-full w-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://placehold.co/1200x900" alt="PVC prozori za kuću" class="h-full w-full object-cover"></div>
+              <div class="swiper-slide"><img src="https://placehold.co/1200x900" alt="PVC prozori za stan" class="h-full w-full object-cover"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <div class="window-content" data-slide="0"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Zamjena postojeće stolarije</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Vrijeme je za bolje prozore?</h3><p class="mt-5 leading-relaxed text-slate-600">Prilikom zamjene postojeće stolarije važno je pravilno procijeniti stanje objekta, odabrati odgovarajući sistem i kvalitetno izvesti montažu.</p></div>
+          <div class="window-content hidden" data-slide="1"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Nova ugradnja</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Prozori za novi prostor.</h3><p class="mt-5 leading-relaxed text-slate-600">Za novogradnju zajedno možemo definisati rješenje koje odgovara objektu, načinu korištenja i željenom nivou udobnosti.</p></div>
+          <div class="window-content hidden" data-slide="2"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Kuće</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Više svjetla i udobnosti.</h3><p class="mt-5 leading-relaxed text-slate-600">Prozori se mogu prilagoditi arhitekturi kuće, rasporedu prostorija i željenom izgledu.</p></div>
+          <div class="window-content hidden" data-slide="3"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Stanovi</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Udobniji stan bez kompromisa.</h3><p class="mt-5 leading-relaxed text-slate-600">Posebnu pažnju možemo posvetiti zvučnoj izolaciji i izboru rješenja za postojeći prostor.</p></div>
+          <div class="mt-8 flex justify-center lg:justify-start"><a href="#kontakt" class="inline-flex rounded-full bg-brand-700 px-7 py-3.5 font-semibold text-white transition hover:bg-brand-800">Zatraži ponudu za prozore</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div><h3 class="font-semibold text-slate-900">Želite više tehničkih informacija?</h3><p class="mt-1 text-sm text-slate-600">Preuzmite specifikaciju i saznajte više o sistemu.</p></div>
+      <a href="#" onclick="return false;" class="inline-flex w-fit rounded-full border border-brand-700 px-5 py-2.5 text-sm font-semibold text-brand-800 transition hover:bg-brand-50">Preuzmi specifikaciju</a>
+    </div>
+
+    <div class="mt-16 grid overflow-hidden rounded-2xl bg-brand-700 text-white sm:grid-cols-3">
+      <div class="p-6 text-center"><div class="text-2xl font-bold">REHAU</div><div class="mt-1 text-sm text-white/75">provjeren sistem</div></div>
+      <div class="border-white/15 p-6 text-center sm:border-x"><div class="text-2xl font-bold">25+</div><div class="mt-1 text-sm text-white/75">godina iskustva</div></div>
+      <div class="p-6 text-center"><div class="text-2xl font-bold">✓</div><div class="mt-1 text-sm text-white/75">profesionalna ugradnja</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PVC VRATA -->
+<section id="vrata" class="bg-slate-50 py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="max-w-4xl">
+      <div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">PVC ulazna vrata · REHAU</div>
+      <h2 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Sigurnost i izgled na vaš način.</h2>
+      <p class="mt-6 text-lg leading-relaxed text-slate-600">Ulazna vrata trebaju biti sigurna, stabilna i usklađena sa izgledom objekta. Izbor panela, boje, dekora i sigurnosnih elemenata omogućava individualno rješenje.</p>
+    </div>
+
+    <div class="mt-16 grid items-center gap-10 lg:grid-cols-2">
+      <div class="order-1">
+        <div class="door-content" data-door="0"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Dekorativni panel</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Vrata koja daju karakter ulazu.</h3><p class="mt-5 leading-relaxed text-slate-600">Dekorativni paneli omogućavaju veliki broj kombinacija izgleda, proporcija i završnih obrada.</p></div>
+        <div class="door-content hidden" data-door="1"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Sigurnosna vrata</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Kada je sigurnost prioritet.</h3><p class="mt-5 leading-relaxed text-slate-600">Stabilna konstrukcija i kvalitetni sigurnosni elementi doprinose većoj zaštiti i osjećaju sigurnosti u domu.</p></div>
+        <div class="door-content hidden" data-door="2"><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Dekor i tekstura</div><h3 class="mt-4 text-3xl font-bold text-slate-900">Drveni izgled, savremena vrata.</h3><p class="mt-5 leading-relaxed text-slate-600">Dekori poput hrasta ili mahagonija mogu se koristiti za topliji i izražajniji izgled ulaza.</p></div>
+        <div class="mt-8 flex justify-center lg:justify-start"><a href="#kontakt" class="inline-flex rounded-full bg-brand-700 px-7 py-3.5 font-semibold text-white transition hover:bg-brand-800">Zatraži ponudu za vrata</a></div>
+      </div>
+
+      <div class="order-2">
+        <div class="swiper door-swiper h-[520px]">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="https://placehold.co/1000x1300" alt="Ulazna vrata sa dekorativnim panelom" class="h-full w-full rounded-3xl object-cover"></div>
+            <div class="swiper-slide"><img src="https://placehold.co/1000x1300" alt="Sigurnosna PVC vrata" class="h-full w-full rounded-3xl object-cover"></div>
+            <div class="swiper-slide"><img src="https://placehold.co/1000x1300" alt="PVC vrata u drvenom dekoru" class="h-full w-full rounded-3xl object-cover"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div><h3 class="font-semibold text-slate-900">Želite pogledati više modela?</h3><p class="mt-1 text-sm text-slate-600">Pregledajte katalog osnovnih rješenja i dekora.</p></div>
+      <a href="#" onclick="return false;" class="inline-flex w-fit rounded-full border border-brand-700 px-5 py-2.5 text-sm font-semibold text-brand-800 transition hover:bg-brand-50">Preuzmi katalog</a>
+    </div>
+
+    <div class="mt-16 grid overflow-hidden rounded-2xl bg-brand-800 text-white sm:grid-cols-3">
+      <div class="p-6 text-center"><div class="text-2xl font-bold">Sigurnost</div><div class="mt-1 text-sm text-white/70">kvalitetni sigurnosni elementi</div></div>
+      <div class="border-white/15 p-6 text-center sm:border-x"><div class="text-2xl font-bold">REHAU</div><div class="mt-1 text-sm text-white/70">provjeren sistem</div></div>
+      <div class="p-6 text-center"><div class="text-2xl font-bold">Po mjeri</div><div class="mt-1 text-sm text-white/70">izbor izgleda i dekora</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DODATNE MOGUĆNOSTI -->
+<section id="opcije" class="bg-brand-50 py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Dodatne mogućnosti</div>
+      <h2 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Prilagodite svoju stolariju uz dodatne mogućnosti.</h2>
+      <p class="mt-6 text-lg leading-relaxed text-slate-600">Nakon odabira osnovnog rješenja, dodatne mogućnosti omogućavaju prilagođavanje izgleda i funkcionalnosti vašem prostoru.</p>
+    </div>
+
+    <div class="swiper optionsSwiper mt-14 w-full">
+      <div class="swiper-wrapper py-4">
+        <button type="button" class="option-card swiper-slide rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-100 transition hover:-translate-y-1" data-option="boje">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-xl text-brand-700">◈</div>
+          <h3 class="text-xl font-bold text-slate-900">Boja i tekstura</h3>
+          <p class="mt-3 leading-relaxed text-slate-600">Izbor boja, dekora i tekstura prema karakteru objekta i vašem ukusu.</p>
+        </button>
+        <button type="button" class="option-card swiper-slide rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-100 transition hover:-translate-y-1" data-option="roletne">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-xl text-brand-700">▤</div>
+          <h3 class="text-xl font-bold text-slate-900">Roletne i komarnici</h3>
+          <p class="mt-3 leading-relaxed text-slate-600">Praktična rješenja za dodatnu zaštitu, kontrolu svjetlosti i udobnost.</p>
+        </button>
+        <button type="button" class="option-card swiper-slide rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-100 transition hover:-translate-y-1" data-option="klupice">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-xl text-brand-700">▱</div>
+          <h3 class="text-xl font-bold text-slate-900">Klupice</h3>
+          <p class="mt-3 leading-relaxed text-slate-600">Vanjske i unutrašnje klupice koje se uklapaju u odabrano rješenje.</p>
+        </button>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="mt-10 w-full">
+      <div class="overflow-hidden rounded-3xl border border-slate-200 bg-white">
+        <button type="button" id="optionAccordionTrigger" class="flex w-full items-center justify-between p-6 text-left font-bold text-slate-900" aria-expanded="false">
+          <span id="optionTitle">Odaberite mogućnost</span><span id="optionIcon" class="text-2xl">+</span>
+        </button>
+        <div id="optionPanel" class="hidden border-t border-slate-200 px-6 pb-7 pt-5">
+          <p id="optionContent" class="leading-7 text-slate-600">Kliknite jednu od mogućnosti iznad da biste vidjeli više informacija.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center text-sm text-slate-500">Sve mogućnosti biramo zajedno kroz savjetovanje prema vašem objektu.</div>
+  </div>
+</section>
+
+<!-- POVJERENJE -->
+<section id="povjerenje" class="bg-brand-800 py-20 text-white lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
+      <div><div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-200">Povjerenje i standardi</div><h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Znate ko stoji iza proizvoda i ugradnje.</h2></div>
+      <div>
+        <p class="leading-relaxed text-white/80">Kod odabira stolarije važno je da znate ko stoji iza proizvoda i ugradnje.</p>
+        <p class="mt-5 leading-relaxed text-white/80">Svoj rad temeljimo na dugogodišnjem iskustvu, provjerenim njemačkim REHAU sistemima i dosljednoj primjeni standarda u izradi i montaži.</p>
+        <p class="mt-5 leading-relaxed text-white/80">Posebnu pažnju posvećujemo kvalitetu izvedbe u svakom koraku, jer samo pravilno proizvedena i ugrađena stolarija daje rezultate koje klijenti očekuju.</p>
+      </div>
+    </div>
+    <div class="mt-16 grid gap-5 sm:grid-cols-3">
+      <div class="rounded-2xl border border-white/15 bg-white/5 p-7 text-center"><div class="text-4xl font-bold">25+</div><div class="mt-2 text-sm text-white/70">godina iskustva</div></div>
+      <div class="rounded-2xl border border-white/15 bg-white/5 p-7 text-center"><div class="text-4xl font-bold">REHAU</div><div class="mt-2 text-sm text-white/70">provjeren njemački sistem</div></div>
+      <div class="rounded-2xl border border-white/15 bg-white/5 p-7 text-center"><div class="text-4xl font-bold">✓</div><div class="mt-2 text-sm text-white/70">standard u izradi i montaži</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FEAL -->
+<section id="feal" class="bg-aluminium py-20 lg:py-28">
+  <div class="mx-auto max-w-7xl px-5 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div class="overflow-hidden rounded-3xl"><img src="https://placehold.co/1400x1000" alt="FEAL aluminijski sistemi" class="h-full min-h-[420px] w-full object-cover"></div>
+      <div>
+        <div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">FEAL · Aluminijski sistemi</div>
+        <h2 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">Savremena rješenja za zahtjevnije objekte.</h2>
+        <p class="mt-6 text-lg leading-relaxed text-slate-600">Za savremene i poslovne objekte nudimo aluminijske sisteme proizvođača FEAL, pogodne za veće staklene površine i moderne arhitektonske zahtjeve.</p>
+        <p class="mt-5 leading-relaxed text-slate-600">Pored aluminijske stolarije, aluminij se koristi i za ograde, nadstrešnice i uređenje bašti.</p>
+        <p class="mt-5 leading-relaxed text-slate-600">Svaki projekat razmatramo individualno, uz savjetovanje.</p>
+        <div class="mt-8"><a href="#kontakt" class="inline-flex rounded-full bg-brand-700 px-7 py-3.5 font-semibold text-white transition hover:bg-brand-800">Razgovarajmo o projektu</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PODRUČJE RADA -->
+<section id="podrucje-rada" class="bg-white py-20 lg:py-24">
+  <div class="mx-auto max-w-5xl px-5 text-center lg:px-8">
+    <div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700">Područje rada</div>
+    <h2 class="mt-4 text-4xl font-bold tracking-tight text-slate-900">Doboj i okolina.</h2>
+    <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600">Dostupni smo klijentima u Doboju i okolnim gradovima i općinama.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-3">
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Doboj</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Tešanj</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Maglaj</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Zenica</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Zavidovići</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Gračanica</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Tuzla</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Modriča</span>
+      <span class="rounded-full bg-brand-50 px-5 py-2.5 text-sm text-slate-700">Derventa</span>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT / SMART FORM -->
+<section id="kontakt" class="bg-brand-900 py-20 text-white lg:py-28">
+  <div class="mx-auto max-w-5xl px-5 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <div class="text-sm font-bold uppercase tracking-[0.2em] text-brand-200">Kontakt</div>
+      <h2 class="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">Recite nam šta vam je potrebno.</h2>
+      <p class="mt-5 text-lg leading-relaxed text-white/75">Nekoliko osnovnih informacija dovoljno je da krenemo. Ostalo možemo dogovoriti kroz razgovor.</p>
+    </div>
+
+    <div class="mx-auto mt-12 max-w-3xl">
+      <form id="smartContactForm" class="overflow-hidden rounded-3xl bg-white text-slate-800 shadow-xl">
+        <div class="border-b border-slate-200 px-6 py-6 sm:px-8">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand-700">Brzi upit</p>
+              <h3 class="mt-2 text-2xl font-bold text-slate-900">Recite nam šta vam je potrebno.</h3>
+            </div>
+            <div id="smartFormProgress" class="shrink-0 rounded-full bg-brand-50 px-4 py-2 text-sm font-bold text-brand-700">1 / 4</div>
+          </div>
+        </div>
+        <div id="completedSteps"></div>
+        <div id="activeSteps"></div>
+        <noscript><div class="border-t border-slate-200 p-6 text-sm text-slate-600">Za korištenje kontakt forme potrebno je omogućiti JavaScript.</div></noscript>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- MINIMALIST FOOTER -->
+<footer class="bg-footer text-white">
+  <div class="mx-auto max-w-7xl px-5 py-5 pt-0 text-center text-xs lg:px-8">
+    © 2026 GLUMČEVIĆ. Sva prava zadržana.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="./assets/js/main.js"></script>
+
+</body>
+</html>
