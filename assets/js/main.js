@@ -58,48 +58,232 @@ document.addEventListener('DOMContentLoaded', () => {
   updateDoorSwiperDirection();
   window.addEventListener('resize', updateDoorSwiperDirection);
 
-  const optionsSwiper = new Swiper('.optionsSwiper', {
-    slidesPerView: 1.1,
-    spaceBetween: 16,
-    breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 3, spaceBetween: 24 }
+/* =========================================================
+   DODATNE MOGUĆNOSTI
+========================================================= */
+
+
+/*
+ * Options swiper.
+ */
+
+new Swiper('.optionsSwiper', {
+
+  slidesPerView: 1,
+
+  spaceBetween: 20,
+
+  breakpoints: {
+
+    640: {
+      slidesPerView: 2
     },
-    pagination: { el: '.optionsSwiper .swiper-pagination', clickable: true }
-  });
 
-  const optionData = {
-    boje: ['Boja i tekstura', 'Izgled stolarije može se prilagoditi prostoru kroz izbor boje, dekora i teksture. Konkretan izbor prolazi kroz savjetovanje.'],
-    roletne: ['Roletne i komarnici', 'Dodatna rješenja za zaštitu od sunca, insekata i za veći komfor svakodnevnog korištenja.'],
-    klupice: ['Vanjske i unutrašnje klupice', 'Klupice upotpunjuju funkcionalnost i izgled prozora. Odabir se usklađuje sa stolarijom i prostorom.']
-  };
+    1024: {
+      slidesPerView: 3
+    }
 
-  const optionTitle = document.getElementById('optionTitle');
-  const optionContent = document.getElementById('optionContent');
-  const optionPanel = document.getElementById('optionPanel');
-  const optionIcon = document.getElementById('optionIcon');
-  const optionTrigger = document.getElementById('optionAccordionTrigger');
+  },
 
-  document.querySelectorAll('.option-card').forEach(card => {
-    card.addEventListener('click', () => {
-      document.querySelectorAll('.option-card').forEach(c => c.classList.remove('ring-2', 'ring-brand-700'));
-      card.classList.add('ring-2', 'ring-brand-700');
-      const d = optionData[card.dataset.option];
-      optionTitle.textContent = d[0];
-      optionContent.textContent = d[1];
-      optionPanel.classList.remove('hidden');
-      optionIcon.textContent = '−';
-      optionTrigger.setAttribute('aria-expanded', 'true');
+  pagination: {
+    el: '.optionsSwiper .swiper-pagination',
+    clickable: true
+  }
+
+});
+
+
+/*
+ * Reveal elements.
+ */
+
+const optionReveal =
+  document.getElementById('optionReveal');
+
+const optionCollapse =
+  document.getElementById('optionCollapse');
+
+const optionRevealLabel =
+  document.getElementById('optionRevealLabel');
+
+const optionRevealTitle =
+  document.getElementById('optionRevealTitle');
+
+const optionRevealIntro =
+  document.getElementById('optionRevealIntro');
+
+
+/*
+ * Option data.
+ */
+
+const optionData = {
+
+  boje: {
+    label: 'Boja i tekstura',
+
+    title: 'Prilagodite izgled svojoj priči.',
+
+    intro:
+      'Izgled stolarije možemo prilagoditi prostoru kroz izbor boje, dekora i teksture.',
+
+    contentId: 'optionContentBoje'
+  },
+
+
+  roletne: {
+    label: 'Roletne i komarnici',
+
+    title: 'Više udobnosti i zaštite.',
+
+    intro:
+      'Dodatna rješenja za kontrolu svjetlosti, zaštitu od insekata i veću udobnost prostora.',
+
+    contentId: 'optionContentRoletne'
+  },
+
+
+  klupice: {
+    label: 'Klupice',
+
+    title: 'Detalj koji upotpunjuje prozor.',
+
+    intro:
+      'Unutrašnje i vanjske klupice biramo tako da funkcionalno i vizuelno odgovaraju cijelom rješenju.',
+
+    contentId: 'optionContentKlupice'
+  }
+
+};
+
+
+/*
+ * Show selected option content.
+ */
+
+function showOptionContent(optionKey) {
+
+  document
+    .querySelectorAll('.option-reveal-content')
+    .forEach(section => {
+
+      section.classList.add('hidden');
+
     });
+
+
+  const data =
+    optionData[optionKey];
+
+  if (!data) {
+    return;
+  }
+
+
+  const content =
+    document.getElementById(data.contentId);
+
+  if (content) {
+
+    content.classList.remove('hidden');
+
+  }
+
+}
+
+
+/*
+ * Open option.
+ */
+
+function openOption(optionKey) {
+
+  const data =
+    optionData[optionKey];
+
+  if (!data) {
+    return;
+  }
+
+
+  optionRevealLabel.textContent =
+    data.label;
+
+  optionRevealTitle.textContent =
+    data.title;
+
+  optionRevealIntro.textContent =
+    data.intro;
+
+
+  showOptionContent(optionKey);
+
+
+  optionReveal.classList.remove(
+    'grid-rows-[0fr]',
+    'opacity-0'
+  );
+
+  optionReveal.classList.add(
+    'grid-rows-[1fr]',
+    'opacity-100'
+  );
+
+}
+
+
+/*
+ * Close option reveal.
+ */
+
+function closeOption() {
+
+  optionReveal.classList.remove(
+    'grid-rows-[1fr]',
+    'opacity-100'
+  );
+
+  optionReveal.classList.add(
+    'grid-rows-[0fr]',
+    'opacity-0'
+  );
+
+}
+
+
+/*
+ * Option card click.
+ */
+
+document
+  .querySelectorAll('.option-card')
+  .forEach(card => {
+
+    card.addEventListener(
+      'click',
+      () => {
+
+        openOption(
+          card.dataset.option
+        );
+
+      }
+    );
+
   });
 
-  optionTrigger.addEventListener('click', () => {
-    const open = optionPanel.classList.toggle('hidden') === false;
-    optionIcon.textContent = open ? '−' : '+';
-    optionTrigger.setAttribute('aria-expanded', String(open));
-  });
 
-  /* SMART CONTACT FORM — based on the supplied source */
+/*
+ * Collapse button.
+ */
+
+optionCollapse.addEventListener(
+  'click',
+  closeOption
+);
+ 
+ 
+/* SMART CONTACT FORM — based on the supplied source */
   const form = document.getElementById('smartContactForm');
   const completedSteps = document.getElementById('completedSteps');
   const activeSteps = document.getElementById('activeSteps');
