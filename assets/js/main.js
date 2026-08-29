@@ -62,11 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
    DODATNE MOGUĆNOSTI
 ========================================================= */
 
-
-/*
- * Options swiper.
- */
-
 new Swiper('.optionsSwiper', {
 
   slidesPerView: 1,
@@ -103,65 +98,7 @@ const optionReveal =
 const optionCollapse =
   document.getElementById('optionCollapse');
 
-const optionRevealLabel =
-  document.getElementById('optionRevealLabel');
-
-const optionRevealTitle =
-  document.getElementById('optionRevealTitle');
-
-const optionRevealIntro =
-  document.getElementById('optionRevealIntro');
-
-
-/*
- * Option data.
- */
-
-const optionData = {
-
-  boje: {
-    label: 'Boja i tekstura',
-
-    title: 'Prilagodite izgled svojoj priči.',
-
-    intro:
-      'Izgled stolarije možemo prilagoditi prostoru kroz izbor boje, dekora i teksture.',
-
-    contentId: 'optionContentBoje'
-  },
-
-
-  roletne: {
-    label: 'Roletne i komarnici',
-
-    title: 'Više udobnosti i zaštite.',
-
-    intro:
-      'Dodatna rješenja za kontrolu svjetlosti, zaštitu od insekata i veću udobnost prostora.',
-
-    contentId: 'optionContentRoletne'
-  },
-
-
-  klupice: {
-    label: 'Klupice',
-
-    title: 'Detalj koji upotpunjuje prozor.',
-
-    intro:
-      'Unutrašnje i vanjske klupice biramo tako da funkcionalno i vizuelno odgovaraju cijelom rješenju.',
-
-    contentId: 'optionContentKlupice'
-  }
-
-};
-
-
-/*
- * Show selected option content.
- */
-
-function showOptionContent(optionKey) {
+function openOption(targetId) {
 
   document
     .querySelectorAll('.option-reveal-content')
@@ -172,51 +109,16 @@ function showOptionContent(optionKey) {
     });
 
 
-  const data =
-    optionData[optionKey];
+  const target =
+    document.getElementById(targetId);
 
-  if (!data) {
+
+  if (!target) {
     return;
   }
 
 
-  const content =
-    document.getElementById(data.contentId);
-
-  if (content) {
-
-    content.classList.remove('hidden');
-
-  }
-
-}
-
-
-/*
- * Open option.
- */
-
-function openOption(optionKey) {
-
-  const data =
-    optionData[optionKey];
-
-  if (!data) {
-    return;
-  }
-
-
-  optionRevealLabel.textContent =
-    data.label;
-
-  optionRevealTitle.textContent =
-    data.title;
-
-  optionRevealIntro.textContent =
-    data.intro;
-
-
-  showOptionContent(optionKey);
+  target.classList.remove('hidden');
 
 
   optionReveal.classList.remove(
@@ -231,10 +133,6 @@ function openOption(optionKey) {
 
 }
 
-
-/*
- * Close option reveal.
- */
 
 function closeOption() {
 
@@ -264,7 +162,7 @@ document
       () => {
 
         openOption(
-          card.dataset.option
+          card.dataset.optionTarget
         );
 
       }

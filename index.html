@@ -641,7 +641,7 @@
             <button
               type="button"
               class="option-card swiper-slide group relative flex h-[225px] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-3xl bg-white p-8 text-center ring-1 ring-slate-200 transition-all duration-300 ease-out hover:shadow-[0_7px_14px_rgba(30,58,95,0.22)]"
-              data-option="boje"
+              data-option-target="optionContentBoje"
             >
               <div
                 class="option-normal flex flex-col items-center transition-all duration-300 group-hover:-translate-y-2 group-hover:opacity-0"
@@ -673,7 +673,7 @@
             <button
               type="button"
               class="option-card swiper-slide group relative flex h-[225px] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-3xl bg-white p-8 text-center ring-1 ring-slate-200 transition-all duration-300 ease-out hover:shadow-[0_7px_14px_rgba(30,58,95,0.22)]"
-              data-option="roletne"
+              data-option-target="optionContentRoletne"
             >
               <div
                 class="option-normal flex flex-col items-center transition-all duration-300 group-hover:-translate-y-2 group-hover:opacity-0"
@@ -705,7 +705,7 @@
             <button
               type="button"
               class="option-card swiper-slide group relative flex h-[225px] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-3xl bg-white p-8 text-center ring-1 ring-slate-200 transition-all duration-300 ease-out hover:shadow-[0_7px_14px_rgba(30,58,95,0.22)]"
-              data-option="klupice"
+              data-option-target="optionContentKlupice"
             >
               <div
                 class="option-normal flex flex-col items-center transition-all duration-300 group-hover:-translate-y-2 group-hover:opacity-0"
@@ -715,7 +715,7 @@
                 >
                   ▱
                 </div>
-                <h3 class="text-xl font-bold text-slate-900">Klupice</h3>
+                <h3 class="text-xl font-bold text-slate-900">Klupice i pribor</h3>
               </div>
 
               <div
@@ -724,8 +724,7 @@
                 <p
                   class="max-w-[250px] text-lg font-medium leading-relaxed text-slate-700"
                 >
-                  Upotpunite prozor funkcionalnim i vizuelno usklađenim
-                  klupicama.
+                  Upotpunite stolariju funkcionalnim i vizuelno usklađenim detaljima.
                 </p>
                 <span class="mt-5 text-lg font-bold text-brand-700">
                   Više →
@@ -753,30 +752,27 @@
                 Sakrij ↑
               </button>
               <div class="p-8 pt-20 lg:p-12 lg:pt-12">
-                <div class="max-w-3xl">
+
+                <div id="optionContentBoje" class="option-reveal-content mt-10">
+                  <div class="max-w-3xl">
                   <div
-                    id="optionRevealLabel"
                     class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700"
                   >
                     Boja i tekstura
                   </div>
                   <h3
-                    id="optionRevealTitle"
                     class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
                   >
                     Prilagodite izgled svojoj priči.
                   </h3>
                   <p
-                    id="optionRevealIntro"
                     class="mt-5 text-lg leading-relaxed text-slate-600"
                   >
                     Izgled stolarije možemo prilagoditi prostoru kroz izbor
                     boje, dekora i teksture.
                   </p>
                 </div>
-
-                <div id="optionContentBoje" class="option-reveal-content mt-10">
-                  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     <div
                       class="rounded-2xl border border-slate-200 bg-slate-50 p-6"
                     >
@@ -814,6 +810,23 @@
                   id="optionContentRoletne"
                   class="option-reveal-content mt-10 hidden"
                 >
+                <div class="max-w-3xl">
+                  <div
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700"
+                  >
+                    Roletne i komarnici
+                  </div>
+                  <h3
+                    class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                  >
+                    Više udobnosti i zaštite.
+                  </h3>
+                  <p
+                    class="mt-5 text-lg leading-relaxed text-slate-600"
+                  >
+                    Dodatna rješenja za kontrolu svjetlosti, zaštitu od insekata i veću udobnost prostora.
+                  </p>
+                </div>
                   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     <div
                       class="rounded-2xl border border-slate-200 bg-slate-50 p-6"
@@ -854,6 +867,23 @@
                   id="optionContentKlupice"
                   class="option-reveal-content mt-10 hidden"
                 >
+                <div class="max-w-3xl">
+                  <div
+                    class="text-sm font-bold uppercase tracking-[0.2em] text-brand-700"
+                  >
+                    Klupice i pribor
+                  </div>
+                  <h3
+                    class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+                  >
+                    Detalji koji upotpunjuju vaše rješenje.
+                  </h3>
+                  <p
+                    class="mt-5 text-lg leading-relaxed text-slate-600"
+                  >
+                    Unutrašnje i vanjske klupice, kao i odabrani elementi i pribor, mogu se uskladiti sa stolarijom, objektom i načinom korištenja prostora.
+                  </p>
+                </div>
                   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                     <div
                       class="rounded-2xl border border-slate-200 bg-slate-50 p-6"
@@ -863,8 +893,7 @@
                         Unutrašnje klupice
                       </h4>
                       <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                        Funkcionalno i vizuelno upotpunjuju prostor oko prozora
-                        i mogu se uklopiti sa enterijerom.
+                        Praktično i estetsko rješenje za završnu obradu prostora oko prozora.
                       </p>
                     </div>
                     <div
@@ -873,18 +902,16 @@
                       <div class="mb-4 text-2xl text-brand-700">▱</div>
                       <h4 class="font-bold text-slate-900">Vanjske klupice</h4>
                       <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                        Pomažu u završnoj obradi prozora i zaštiti donjeg dijela
-                        otvora od vremenskih uticaja.
+                        Za zaštitu i uredan završetak spoljašnjeg dijela prozora, uz izbor odgovarajućeg materijala i izgleda.
                       </p>
                     </div>
                     <div
                       class="rounded-2xl border border-slate-200 bg-slate-50 p-6"
                     >
                       <div class="mb-4 text-2xl text-brand-700">✓</div>
-                      <h4 class="font-bold text-slate-900">Usklađen izgled</h4>
+                      <h4 class="font-bold text-slate-900">Pribor i završni elementi</h4>
                       <p class="mt-2 text-sm leading-relaxed text-slate-600">
-                        Materijal, boja i završna obrada mogu se uskladiti sa
-                        odabranom stolarijom i objektom.
+                        Dodatni elementi koji doprinose funkcionalnosti, završnoj obradi i cjelokupnom izgledu stolarije.
                       </p>
                     </div>
                   </div>
